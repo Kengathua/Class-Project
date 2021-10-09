@@ -1,0 +1,73 @@
+.analysis-section {
+  background-color: #212529;
+  height: 100vh;
+}
+
+.analysis-entries{
+  text-align: center;
+}
+
+.ticker-selector {
+  margin-top: 10px;
+  width: 350px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  border-color: blue;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  width: 240px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.duration-input {
+  margin-top: 10px;
+  width: 310px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.date-input {
+  margin-top: 10px;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.results {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 200px;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.display-result{
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+.display-signal {
+  font-size: 30px;
+}
+
+.predicted-result {
+  font-size: 20px;
+}
+
+.actual-price {
+  margin-top: 15px;
+  font-size: 25px;
+}
+

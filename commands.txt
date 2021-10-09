@@ -1,0 +1,6 @@
+virtualenv alpha
+
+streamlit run app.py
+
+crawler url = stocks/live_crawler
+results url =analyzer/results

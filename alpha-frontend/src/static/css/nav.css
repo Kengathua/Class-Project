@@ -1,0 +1,236 @@
+/*========================Default===============================================*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*===========================================Entire HEADER==================*/
+.header-section{
+    background-color:black;
+    left: 0;
+    margin-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*=======================================CONTACTS AND AUTHENTICATION=======*/
+.top-section{
+    position: relative;
+    background-color: none;
+    height: 45px;
+}
+
+.contacts-info{
+    display: flex;
+    list-style: none;
+    top: 0;
+    left: 0;
+    padding: 1% 5px;
+    color: whitesmoke;
+}
+
+.header-social-list{
+    display: inline-flex;
+    font-size: 20px;
+}
+
+.primary-link{
+    padding-left: 1px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.primary-link:hover{
+    color: rgb(156, 76, 231);
+}
+
+.contact-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: whitesmoke;
+    text-decoration: none;
+    }
+
+.contacts-icon{
+    margin-right: 5px;
+    }
+
+.contact-link:hover{
+    color:rgb(133, 44, 216);
+}
+
+.user{
+    font-size: 16px;
+    padding-right: 20px;
+    color: whitesmoke;
+}
+
+.auth{
+    float: right;
+    list-style: none;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.top-right{
+    position: absolute;
+    float: right;
+    list-style: none;
+    right: 0;
+    position: absolute;
+    float: right;
+    display: inline-flex;
+    padding: 1% 10px;
+}
+
+.auth-btn{
+    text-decoration: none;
+    padding-right: 8px;
+    padding-left: 5px;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+.auth-btn:hover{
+    color:chocolate;
+}
+/*===============================================Navbar===============================*/
+
+.nav{
+    left: 0;
+    width: 100%;
+    background-color:none;
+    display: inline-flex;
+    position: relative;
+}
+.nav-bar{
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.nav-logo{
+    background-color: none;
+}
+
+.logo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.1rem;
+    font-weight: 500;
+    color: blue;
+    text-decoration: none;
+    background-color: none;
+}
+
+.nav-menu{
+    position: relative;
+    background-color: none;
+    width: 100%;
+    padding: 1% 0px;
+}
+.nav-options{
+    list-style: none;
+    display: inline-flex;
+}
+
+.nav-link{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: whitesmoke;
+  text-decoration: none;
+  font-family:inherit;
+}
+
+.nav-link:hover{
+    color: blue;
+}
+
+.nav-item{
+    padding-left: 20px;
+}
+
+.search{
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    float: right;
+    margin-right: 20px;
+}
+
+.search-icon{
+    list-style: none;
+    font-size: 20px;
+}
+
+/*===================================Login and registration form============================*/
+
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+
+/* =========================================Social Icons================================= */
+.fa-twitter{
+    color: rgb(29, 155, 240);
+}
+.fa-facebook{
+    color: #1877f2;
+}
+
+.fa-linkedin{
+    color: #0a66c2;
+}
+
+.fa-youtube-play{
+    color: #c00;
+}
+
+.fa-pinterest-p{
+    color: #ff5247;
+}
+
+.fa-instagram{
+    color:  #C13584;
+}
+
+.fa-twitter:hover{
+    color: rgb(208, 193, 221);
+    background-color: rgb(29, 155, 240);
+}
+
+.fa-facebook:hover{
+    color: rgb(208, 193, 221);
+    background-color: #1877f2;
+}
+
+.fa-linkedin:hover{
+    color: rgb(208, 193, 221);
+    background-color: #0a66c2;
+}
+
+.fa-youtube-play:hover{
+    color: rgb(208, 193, 221);
+    background-color: #c00;
+}
+
+.fa-pinterest-p:hover{
+    background-color: rgb(208, 193, 221);
+}
+
+.fa-instagram:hover{
+    color: rgb(208, 193, 221);
+    background-color:  #C13584;
+}
