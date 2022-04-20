@@ -23,6 +23,7 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render, redirect
 from pandas_datareader._utils import RemoteDataError
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
 import bs4 as bs
 import numpy as np
@@ -64,8 +65,9 @@ def nse_crawler(request):
         options.add_argument('--ignore-certificate-errors')
         options.add_argument('--incognito')
         options.add_argument('--headless')
-        driver = webdriver.Chrome(
-            "/usr/bin/chromedriver", options=options)
+        # driver = webdriver.Chrome(
+        #     "/usr/bin/chromedriver", options=options)
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
         driver.get("https://afx.kwayisi.org/nse/")
 
         page_source = driver.page_source
@@ -90,6 +92,7 @@ def nse_crawler(request):
         current = []
         trs = soup.find('div', class_='t').find_all('tr')
         headerow = rowgetDataText(trs[0], 'th')
+
         if headerow:  # if there is a header row include first
             current.append(headerow)
             trs = trs[1:]
@@ -120,13 +123,8 @@ def nse_crawler(request):
         tickers = list_nse_tickers()
 
         for ticker in tickers:
-            try:
-                Ticker.objects.get(name=ticker)
-                pass
-
-            except Ticker.DoesNotExist:
-                model = Ticker(name=ticker)
-                model.save()
+            if not Ticker.objects.filter(name=ticker).exists():
+                Ticker.objects.get_or_create(name = ticker)
 
     save_tickers_to_db()
 
@@ -246,7 +244,8 @@ def nse_crawler(request):
                     low=low, close=current, adj_close=current, volume=volume
                 )
                 model.save()
-                print("Saved")
+                msg = "Saved"
+
             else:
                 msg = 'The ticker {}'.format(
                     stock_name), 'is not the same as {}'.format(ticker)
@@ -313,8 +312,6 @@ def nse_crawler(request):
         #     print("running before crawling time")
         #     get_current_data()
         return status
-
-    automate_data_collection()
 
     now = datetime.datetime.now(pytz.timezone(
         'Africa/Nairobi')).time().strftime('%H:%M:%S')

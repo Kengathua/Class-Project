@@ -22,20 +22,12 @@ import base64
 from io import BytesIO
 
 from rest_framework import viewsets
-from .models import Results, Ticker, Stock
-from .serializers import TickerSerializer,StockSerializer, ResultsSerializer
+from .models import Results
+from .serializers import ResultsSerializer
+
+from alpha_capital.stocks.models import Ticker, Stock
 
 LOGGER = logging.getLogger(__name__)
-
-class TickerViewSet(viewsets.ModelViewSet):
-    queryset = Ticker.objects.all().order_by('name')
-    serializer_class = TickerSerializer
-
-
-class StockViewSet(viewsets.ModelViewSet):
-    queryset = Stock.objects.all().order_by('ticker')
-    serializer_class = StockSerializer
-
 
 class ResultsViewSet(viewsets.ModelViewSet):
     queryset = Results.objects.all().order_by('date')
