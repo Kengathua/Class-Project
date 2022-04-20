@@ -14,6 +14,13 @@ class Ticker(models.Model):
 
     def __str__(self):
         return "%s" % (self.name)
+    
+    def clean(self) -> None:
+        return super().clean()
+    
+
+    def clean(self) -> None:
+        return super().full_clean()
 
 
 class Stock(models.Model):
